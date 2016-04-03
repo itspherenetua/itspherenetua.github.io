@@ -1,387 +1,97 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,cyrillic);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic);
-/* line 5, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,300,700&subset=latin,cyrillic);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
-/* line 22, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
+html { line-height: 1; }
 
-/* line 24, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
+ol, ul { list-style: none; }
 
-/* line 26, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+table { border-collapse: collapse; border-spacing: 0; }
 
-/* line 28, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
 
-/* line 30, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
 
-/* line 32, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
+a img { border: none; }
 
-/* line 116, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-/* line 13, ../sass/style.scss */
-a, a:link, a:active, a:visited {
-  text-decoration: none;
-  color: #2e2e2e;
-  border-bottom: 1px dotted #2e2e2e;
-}
+::selection { background-color: #0c0c0c; color: #ffffff; }
 
-/* line 18, ../sass/style.scss */
-a:visited {
-  color: #616161;
-  border-bottom: 1px dotted #616161;
-}
+body { color: #0c0c0c; font-family: "Roboto", sans-serif; font-size: 12px; }
 
-/* line 23, ../sass/style.scss */
-::selection {
-  background-color: #2e2e2e;
-  color: #ffffff;
-}
+.navigation { height: 50px; width: 100%; position: fixed; z-index: 2000; top: 0; background-color: #0c0c0c; }
+.navigation-inner-logo-image { margin-left: 20px; height: 40px; padding: 5px; }
+.navigation-inner-menu { margin-right: 20px; float: right; }
+.navigation-inner-menu-item { display: inline-block; height: 50px; }
+.navigation-inner-menu-item-link, .navigation-inner-menu-item-link:active, .navigation-inner-menu-item-link:visited, .navigation-inner-menu-item-link:link { text-decoration: none; color: #ffffff; text-transform: uppercase; font-size: 12px; font-weight: 700; padding: 18px 18px; line-height: 50px; }
+.navigation-inner-menu-item-link:hover { background-color: #262626; }
 
-/* line 28, ../sass/style.scss */
-.wrapper {
-  width: 98%;
-  margin: 0 auto;
-  font-family: "PT Serif", serif;
-  color: #2e2e2e;
-}
+.header { margin-top: 50px; text-align: center; position: relative; padding-bottom: 40px; }
+.header-bg { position: absolute; z-index: 100; top: 0; left: 0; }
+.header-inner-caption { position: relative; z-index: 1000; padding-top: 50px; font-size: 50px; font-weight: 700; }
+.header-inner-text { position: relative; z-index: 1000; padding-top: 90px; font-size: 26px; font-weight: 700; }
+.header-inner-button { position: relative; z-index: 1000; display: inline-block; margin-top: 50px; padding: 20px 30px 20px 60px; border-radius: 30px; color: #ffffff; text-decoration: none; background: #009846 url("../images/services-button-icon.svg") 15px 50% no-repeat; font-size: 18px; font-weight: 400; }
+.header-inner-button:hover { box-shadow: 2px 2px 8px 1px #0c0c0c; }
 
-/* line 34, ../sass/style.scss */
-.column-left {
-  padding: 4%;
-}
+.services { padding-top: 50px; padding-bottom: 50px; }
+.services-header { line-height: 110px; min-height: 110px; background-image: url("../images/bg-caption.jpg"); background-size: 100%; background-attachment: fixed; }
+.services-header-caption { color: #ffffff; font-weight: 700; font-size: 22px; background: url("../images/services.svg") 20px 50% no-repeat; background-size: 60px; padding-left: 100px; }
+.services-list-item { line-height: 110px; min-height: 110px; background: #ffffff; }
+.services-list-item-link { display: block; color: #0c0c0c; padding-left: 20px; font-weight: 700; font-size: 14px; text-decoration: none; background: url("../images/services.svg") 20px 50% no-repeat; background-size: 60px; padding-left: 100px; }
+.services-list-item-link-description { display: none; }
+.services-list-item:nth-child(1) .services-list-item-link { background-image: url("../images/remont-pc.svg"); }
+.services-list-item:nth-child(2) .services-list-item-link { background-image: url("../images/refill.svg"); }
+.services-list-item:nth-child(3) .services-list-item-link { background-image: url("../images/soft.svg"); }
 
-/* line 37, ../sass/style.scss */
-.column-left-mainpagelink, .column-left-mainpagelink:link, .column-left-mainpagelink:active, .column-left-mainpagelink:visited {
-  color: #2e2e2e;
-  border-bottom: none;
-}
+.service { padding-top: 50px; padding-bottom: 50px; }
+.service-header { line-height: 110px; min-height: 110px; background-image: url("../images/bg-caption.jpg"); background-size: 100%; background-attachment: fixed; }
+.service-header-caption { color: #ffffff; background: url("../images/services.svg") 20px 50% no-repeat; background-size: 60px; padding-left: 100px; font-weight: 700; font-size: 16px; }
+#remont-pc .service-header-caption { background-image: url("../images/remont-pc.svg"); }
+#refill .service-header-caption { background-image: url("../images/refill.svg"); }
+#soft .service-header-caption { background-image: url("../images/soft.svg"); }
+#print .service-header-caption { background-image: url("../images/print.svg"); }
+.service-description { padding: 40px; font-family: "PT Serif", serif; font-size: 14px; line-height: 25px; }
+.service-description-caption { font-weight: 700; margin-bottom: 30px; }
+.service-description-features { list-style: disc; margin: 30px 0 30px 20px; }
 
-/* line 41, ../sass/style.scss */
-.column-left-logo {
-  width: 5em;
-}
+.contacts { padding-top: 50px; padding-bottom: 120px; background-image: url("../images/bg-caption.jpg"); background-size: 100%; background-attachment: fixed; color: #ffffff; font-size: 20px; font-weight: 700; }
+.contacts-inner-phones, .contacts-inner-adreses { padding: 22px; display: inline-block; }
+.contacts-inner-phones-phone { display: block; line-height: 40px; color: #ffffff; text-decoration: none; }
+.contacts-inner-phones-phone:hover { text-decoration: underline; }
+.contacts-inner-adreses-adres { display: block; line-height: 40px; color: #ffffff; text-decoration: none; }
+.contacts-inner-adreses-adres:hover { text-decoration: underline; }
+.contacts-inner-map { padding: 5%; width: 88%; }
 
-/* line 44, ../sass/style.scss */
-.column-left-caption {
-  display: inline-block;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 700;
-  font-size: 2.57143em;
-  line-height: 1.33333em;
-}
-
-/* line 50, ../sass/style.scss */
-.column-left-nav-trigger {
-  display: none;
-}
-
-/* line 53, ../sass/style.scss */
-.column-left-nav-checkbox {
-  display: none;
-}
-
-/* line 56, ../sass/style.scss */
-.column-left-nav-menu {
-  padding-top: 2%;
-}
-
-/* line 59, ../sass/style.scss */
-.column-left-nav-menu-item-link, .column-left-nav-menu-item-link:link, .column-left-nav-menu-item-link:active, .column-left-nav-menu-item-link:visited {
-  display: block;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 700;
-  color: #2e2e2e;
-  font-size: 1em;
-  line-height: 1.71429em;
-  line-height: 2.5em;
-  padding-left: 8%;
-  margin-left: -1%;
-  border-bottom: none;
-}
-
-/* line 70, ../sass/style.scss */
-.column-left-nav-menu-item-link_active, .column-left-nav-menu-item-link_active:link, .column-left-nav-menu-item-link_active:active, .column-left-nav-menu-item-link_active:visited {
-  background-color: #c7c7c7;
-}
-
-/* line 73, ../sass/style.scss */
-.column-left-nav-menu-item-link:hover, .column-left-nav-menu-item-link_active:hover {
-  color: #ffffff;
-  background-color: #2e2e2e;
-}
-
-/* line 77, ../sass/style.scss */
-.column-right {
-  padding: 0 4% 4% 4%;
-}
-
-/* line 83, ../sass/style.scss */
-.column-right-contacts-map {
-  width: 100%;
-  margin: 0 0 10% 0;
-}
-
-/* line 87, ../sass/style.scss */
-.column-right-contacts-phone {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 2.57143em;
-  line-height: 1.33333em;
-  font-weight: 700;
-}
-
-/* line 92, ../sass/style.scss */
-.column-right-contacts-address {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 700;
-  font-size: 0.78571em;
-  line-height: 2.18182em;
-}
-
-/* line 97, ../sass/style.scss */
-.column-right-contacts-callback {
-  margin: 12% 0 12% 0;
-  clear: both;
-}
-
-/* line 101, ../sass/style.scss */
-.column-right-contacts-callback-form-name, .column-right-contacts-callback-form-phone {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: none;
-  font-family: "PT Serif", serif;
-  border: 1px solid #009846;
-  width: 30%;
-  height: 3em;
-  padding: 0 1em;
-}
-
-/* line 110, ../sass/style.scss */
-.column-right-contacts-callback-form-button {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  transition: all 0.7s ease;
-  font-family: "PT Serif", serif;
-  font-weight: 700;
-  height: 3em;
-  padding: 0 1em;
-  outline: none;
-  border: 1px solid #009846;
-  background-color: #ffffff;
-}
-
-/* line 121, ../sass/style.scss */
-.column-right-contacts-callback-form-button:focus, .column-right-contacts-callback-form-button:hover {
-  color: #009846;
-  border: 1px solid #2e2e2e;
-}
-
-/* line 125, ../sass/style.scss */
-.column-right-info {
-  padding-top: 6%;
-  font-size: 1em;
-  line-height: 1.71429em;
-}
-
-/* line 129, ../sass/style.scss */
-.column-right-info-caption {
-  font-weight: 700;
-  margin-bottom: 1em;
-}
-
-/* line 133, ../sass/style.scss */
-.column-right-info-paragraph {
-  margin-bottom: 1em;
-}
-
-/* line 136, ../sass/style.scss */
-.column-right-info-list {
-  list-style: disc;
-  padding-left: 1.5em;
-  margin-bottom: 1em;
-}
-
-@media only screen and (min-width: 700px) {
-  /* line 2, ../sass/_desktop.scss */
-  .wrapper {
-    width: 960px;
-    margin: 0 auto;
-    *zoom: 1;
-  }
-  /* line 38, ../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
-  .wrapper:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  /* line 7, ../sass/_desktop.scss */
-  .column-left {
-    float: left;
-    width: 20%;
-    padding: 2% 3% 2% 1%;
-  }
-
-  /* line 12, ../sass/_desktop.scss */
-  .column-left-logo {
-    width: 80%;
-  }
-
-  /* line 15, ../sass/_desktop.scss */
-  .column-left-caption {
-    margin-top: 10%;
-    line-height: 0.9em;
-  }
-
-  /* line 19, ../sass/_desktop.scss */
-  .column-left-nav-menu {
-    padding: 1%;
-    padding-top: 20%;
-  }
-
-  /* line 23, ../sass/_desktop.scss */
-  .column-left-nav-menu-item-link, .column-left-nav-menu-item-link:link, .column-left-nav-menu-item-link:active, .column-left-nav-menu-item-link:visited {
-    padding-left: 0;
-    margin: 0;
-  }
-
-  /* line 27, ../sass/_desktop.scss */
-  .column-left-nav-menu-item-link:hover {
-    padding-left: 6%;
-  }
-
-  /* line 30, ../sass/_desktop.scss */
-  .column-left-nav-menu-item-link_active, .column-left-nav-menu-item-link_active:link, .column-left-nav-menu-item-link_active:active, .column-left-nav-menu-item-link_active:visited {
-    padding-left: 6%;
-  }
-
-  /* line 33, ../sass/_desktop.scss */
-  .column-right {
-    width: 68%;
-    padding: 2% 1% 2% 7%;
-    float: left;
-  }
-
-  /* line 41, ../sass/_desktop.scss */
-  .column-right-contacts-map {
-    width: 45%;
-    display: block;
-    float: right;
-    margin: 0;
-  }
-
-  /* line 47, ../sass/_desktop.scss */
-  .column-right-contacts-phone {
-    line-height: 1em;
-  }
-
-  /* line 53, ../sass/_desktop.scss */
-  .column-right-contacts-callback {
-    margin: 7% 0 2% 0;
-  }
-}
-@media only screen and (min-width: 700px) and (max-width: 960px) {
-  /* line 62, ../sass/_desktop.scss */
-  .wrapper {
-    width: 700px;
-    font-size: 68%;
-  }
-}
-@media only screen and (max-width: 699px) {
-  /* line 2, ../sass/_mobile.scss */
-  .column-left-caption {
-    line-height: 0.9em;
-    position: relative;
-    top: -0.2em;
-  }
-
-  /* line 7, ../sass/_mobile.scss */
-  .column-left-nav-trigger {
-    display: block;
-    padding: 0.3em 0;
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: 700;
-    color: #009846;
-    position: relative;
-    left: 1.3em;
-  }
-
-  /* line 16, ../sass/_mobile.scss */
-  .column-left-nav-menu {
-    display: none;
-  }
-
-  /* line 19, ../sass/_mobile.scss */
-  .column-left-nav-checkbox:checked ~ .column-left-nav-menu {
-    display: block;
-  }
-
-  /* line 22, ../sass/_mobile.scss */
-  .column-left-nav-checkbox:checked + .column-left-nav-menu {
-    display: block;
-  }
-
-  /* line 25, ../sass/_mobile.scss */
-  .column-right-contacts-callback-form-name, .column-right-contacts-callback-form-phone {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 49%;
-    height: 3em;
-    padding: 1em;
-  }
-
-  /* line 31, ../sass/_mobile.scss */
-  .column-right-contacts-callback-form-button {
-    margin-top: 0.3em;
-    width: 99%;
-  }
-}
+@media only screen and (min-width: 960px) { .navigation-inner { width: 960px; margin: 0 auto; }
+  .header { min-height: 750px; }
+  .header-bg { display: block; }
+  .header-inner { width: 960px; margin: 0 auto; }
+  .header-inner-caption { padding-top: 160px; }
+  .header-inner-text { padding-top: 60px; }
+  .header-inner-button { margin-top: 60px; }
+  .services { min-height: 700px; }
+  .services-header { line-height: 140px; min-height: 140px; }
+  .services-header-caption { width: 960px; margin: 0 auto; width: 720px; padding-left: 240px; font-size: 25px; background: url("../images/services.svg") 110px 50% no-repeat; background-size: 90px; }
+  .services-list { text-align: center; padding-top: 20px; }
+  .services-list-item { display: inline-block; width: 20%; background: #ffffff; padding: 0px 6%; }
+  .services-list-item-link { background: url("../images/services.svg") 50% 30px no-repeat; background-size: 150px; padding: 200px 0px 0px 0px; transition: background-size 0.3s cubic-bezier(0.49, 1.02, 0.37, 1.96); }
+  .services-list-item-link-caption { font-size: 18px; line-height: 18px; }
+  .services-list-item-link-description { height: 90px; overflow: auto; padding: 20px 5px 0px 5px; width: 70%; display: inline-block; visibility: hidden; font-size: 12px; line-height: 14px; font-style: italic; font-weight: 300; }
+  .services-list-item:nth-child(1) .services-list-item-link { background-image: url("../images/remont-pc.svg"); }
+  .services-list-item:nth-child(2) .services-list-item-link { background-image: url("../images/refill.svg"); }
+  .services-list-item:nth-child(3) .services-list-item-link { background-image: url("../images/soft.svg"); }
+  .services-list-item-link:hover { background-size: 130px; box-shadow: #0c0c0c 1px 1px 6px 1px; }
+  .services-list-item-link:hover .services-list-item-link-description { visibility: visible; }
+  .service { min-height: 650px; }
+  .service-header { line-height: 140px; min-height: 140px; }
+  .service-header-caption { width: 960px; margin: 0 auto; width: 720px; padding-left: 240px; font-size: 25px; background: url("../images/service.svg") 110px 50% no-repeat; background-size: 90px; }
+  #remont-pc .service-header-caption { background-image: url("../images/remont-pc.svg"); }
+  #refill .service-header-caption { background-image: url("../images/refill.svg"); }
+  #soft .service-header-caption { background-image: url("../images/soft.svg"); }
+  #print .service-header-caption { background-image: url("../images/print.svg"); }
+  .service-description { width: 960px; margin: 0 auto; width: 880px; }
+  .contacts { min-height: 700px; font-size: 32px; }
+  .contacts-inner { width: 960px; margin: 0 auto; }
+  .contacts-inner-phones, .contacts-inner-adreses { padding: 30px 0px 70px 110px; } }
